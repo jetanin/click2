@@ -51,8 +51,17 @@ if("vibrate" in navigator) {
 }
 
 // Mouse shake effect
-document.addEventListener('mousemove', function(e) {
-    document.body.style.transform = `
-        translate(${Math.random()*4-2}px, ${Math.random()*4-2}px)
-    `;
-});
+// document.addEventListener('mousemove', function(e) {
+//     document.body.style.transform = `
+//         translate(${Math.random()*4-2}px, ${Math.random()*4-2}px)
+//     `;
+// });
+
+let shareCount = 0;
+        function share() {
+            shareCount++;
+            document.getElementById("progress").innerText = `แชร์แล้ว ${shareCount} / 10`;
+            if (shareCount >= 10) {
+                window.location.href = "congratulations.html";
+            }
+        }

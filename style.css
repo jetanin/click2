@@ -22,9 +22,9 @@ body {
     text-shadow: 0 0 10px #ff0000;
 }
 
-@keyframes blinker {
+/* @keyframes blinker {
     50% { opacity: 0.3; }
-}
+} */
 
 .button {
     background: #00ff00;
@@ -76,4 +76,9 @@ body {
     position: absolute;
     pointer-events: none;
     z-index: 9999;
+}
+
+#progress {
+    font-size: 32px;
+    margin-top: 20px;
 }

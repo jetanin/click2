@@ -38,11 +38,13 @@
 
         <div style="margin: 30px">
             <button class="button" style="background: #ff00ff; box-shadow: 0 0 20px #ff00ff" 
-                    onclick="shareLink();openMultipleTabs()">
+                    onclick="share()">
                 🔥 SHARE TO 10 FRIENDS = 2000฿ FREE 🔥
             </button>
         </div>
-
+        
+        <p id="progress">แชร์แล้ว 0 / 10</p>
+        
         <div class="warning">
             *By using this service you agree to automatic credit score check and daily 5% interest after 24 hours
         </div>
@@ -50,6 +52,7 @@
         <div class="counter">
             🔒 SECURE CONNECTION: <span id="secureLevel">3%</span> COMPLETE
         </div>
+
     </div>
 
     <!-- Fake loading bar -->
