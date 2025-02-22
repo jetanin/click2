@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Max-somsin';
+    src: url(./font/MAX_somsin.ttf);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #000 url('./img/bg.png') repeat;
+    background-size: 50px 50px;
+    font-family: Papyrus, Comic Sans MS;
+    font-weight: bolder;
+    color: #ffdd00;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    border: 5px dashed #ff0000;
+    margin: 10px;
+    padding: 100px;
+    display: block;
+    background: linear-gradient(45deg, #000000, #2a2a2a);
+    justify-content: center;
+    align-items: center;
+}
+้.congrats-text{
+    font-size: 5rem;
+}
+.thai-font{
+    /* font-family: 'Max-somsin'; */
+    font-size: 2em;
+}
+.cheewit-font{
+    font-family: 'Max-somsin';
+    font-size: 1.5em;
+    color: #ff0000;
+}

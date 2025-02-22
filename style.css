@@ -1,6 +1,6 @@
 body {
     background: #000 url('./img/bg.png') repeat;
-    background-size: 150px 100px;
+    background-size: 50px 50px;
     font-family: Papyrus, Comic Sans MS;
     color: #ffdd00;
     text-align: center;
@@ -10,6 +10,7 @@ body {
 .container {
     border: 5px dashed #ff0000;
     margin: 10px;
+    margin-top: 100px;
     padding: 15px;
     background: linear-gradient(45deg, #000000, #2a2a2a);
     transform: rotate(1.5deg);

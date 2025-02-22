@@ -11,7 +11,7 @@ let loadWidth = 0;
 setInterval(() => {
     document.getElementById('loadingBar').style.width = 
     `${loadWidth++%100}%`;
-}, 50);
+}, 310);
 
 // Random popups
 setInterval(() => {
@@ -34,9 +34,9 @@ document.addEventListener('mousemove', function(e) {
 });
 
 // Prevent closing
-window.onbeforeunload = function() {
-    return "❗ YOUR APPLICATION IS PENDING! ARE YOU SURE? ❗";
-};
+// window.onbeforeunload = function() {
+//     return "❗ YOUR APPLICATION IS PENDING! ARE YOU SURE? ❗";
+// };
 
 // Auto-play annoying sound
 setTimeout(() => {
@@ -60,8 +60,33 @@ if("vibrate" in navigator) {
 let shareCount = 0;
         function share() {
             shareCount++;
-            document.getElementById("progress").innerText = `แชร์แล้ว ${shareCount} / 10`;
-            if (shareCount >= 10) {
+            document.getElementById("progress").innerText = `แชร์แล้ว ${shareCount} / 5`;
+            if (shareCount >= 5) {
                 window.location.href = "congratulations.html";
             }
         }
+
+
+// Countdown timer script
+function startCountdown(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var countdownDuration = 3 * 60 + 29; // 3 minutes and 29 seconds
+    var display = document.querySelector('#timer');
+    startCountdown(countdownDuration, display);
+};
